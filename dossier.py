@@ -1,5 +1,6 @@
 # key=original name, values=map names
-columns_to_retain = {"B_COUNTRY": "country",
+columns_to_retain = {# methodological variables
+                     "B_COUNTRY": "country",                   
                      "D_INTERVIEW": "interview",
                      "Q_MODE": "mode",
                      "H_SETTLEMENT": "settlment",    
@@ -7,9 +8,10 @@ columns_to_retain = {"B_COUNTRY": "country",
                      "E_RESPINT": "respint",
                      "E1_LITERACY": "literacy",
                      "F_INTPRIVACY": "intprivacy",
-                    #  "W_WEIGHT": "weight",        
-                    #  "S018": "s018",
-                     "Q260": "sex",
+                     "W_WEIGHT": "weight",        
+                     "S018": "s018",
+                     # demographic variables
+                     "Q260": "sex",                            
                      "Q261": "birth_year",
                      "Q262": "age",
                      "Q263": "immigrant",
@@ -37,6 +39,20 @@ columns_to_retain = {"B_COUNTRY": "country",
                      "Q286": "savings",
                      "Q287": "subjective_social_class",
                      "Q288R": "income_scale",
-                     "Q289": "religion"
-
+                     "Q289": "religion",
+                     # political variables
+                     "Q209": "signed_petitions",                 
+                     "Q210": "joined_boycotts",
+                     "Q211": "attended_peaceful_demonstration",
+                     "Q212": "joined_unofficial_strikes",
+                     "Q213": "donated_campaign",
+                     "Q214": "contacted_government",
+                     "Q215": "encouraged_political_action",
+                     "Q216": "encouraged_voting",
+                     "Q217": "fosters_political_knowledge",
+                     "Q218": "signed_petitions_online",
+                     "Q219": "encouraged_political_action_online",
+                     "Q220": "organized_political_events",
+                     "Q221": "voted_locally",
+                     "Q222": "voted_nationally"
 }

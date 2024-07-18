@@ -1,52 +1,48 @@
 # Methodological and Demographic Predictors of Political Engagement
 <br/>
 
-# TLDR
-A XGBoost classifier predicting the political engagement of a person has been trained and deployed to AWS via Lambda. The model assesses if a person would benefit from an intervention aiming to educate and re-engage someone in political action.
+## TL;DR
+An XGBoost classifier predicting the political engagement of a person has been trained and deployed to AWS via Lambda. 
+The model assesses if a person would benefit from an intervention aiming at educating and re-engaging in political action.
 
-Test the model by downloading and running "test_aws_lambda.py" (python and "requests" package needed).
-<br/>
+Test the model by downloading and running **test_aws_lambda.py** (python and "requests" package needed).
 <br/>
 
 ## Context 
-What aspects of a person's life influences their political engagement? 
+The **World Values Survey** (WVS) is an organization that has been gathering socio-economic and psychological data across the world and for over 40 years now.
+Their questionnaire covers features such as personal values, wellbeing, political perceptions and much more.
 
-The **World Values Survey** (WVS) is an organization iteratively analyzing people's values on a global scale.
-They have been running the experiment for more than 40 years. 
-Their questionnaire covers features such as personal values, wellbeing, political perceptions...
-
-This is the first part of 3 series project.
-For this first project, we'll attempt to predict the political engagement levels of a person via surface dimensions like sex, education and profession.
-The second project will analyse political engagement by adding more complex variables (e.g., political perception).
-The final project will analyse the evolution of political engagement over the years. 
+This is the first part of 3-step project where we attempt to predict the political engagement level of a person via surface dimensions like sex, education and profession.
+The second project will analyse political engagement by adding more complex variables to the variable pool (e.g., political perception).
+The final project will inspect the evolution of political engagement over the years. 
 <br/>
 
 ## Rationale
-I believe it's useful to understand what makes a particular person "politically" engaged or not.
-Whether we are aware of, adhering or not to this idea, we are political creatures, living in a political world.
-Voting and asking for that succulent piece of bread at the table both rely on political undertones.
-We are simplifying here, but both of these actions involve the individual's relationship with their past and format their future.  
+Understanding the variables that make a person politically engaged is valuable for a society and its members.
 
-Wouldn't political apathy result in the relinquishing of our political momentum, thus losing, among other valuable things, our voice to the table?
+Whether we are aware of it or not, we are political creatures, living in a political world.
+By means of a simplified example, both voting and asking for a piece of bread at the table rely on political undertones. Both actions involve one's relationship with their past, their rapport to the current world and shape their future interactions.  
+
+Among other valuable things, political apathy may result in losing our voice to the table and the tools to direct our life to clearer shores.
 
 Understanding political profiles is the first step in a comprehensive process that would help us to:
-* **Inform** about the consequences of political engagement 
+* **Inform** about the consequences of political apathy 
 * **Prevent** political manipulation by identifying vulnerable populations 
-* **Support** intervention campaigns to revigorate political engagement
-* **Protect** systems and citizens of political decay by keeping track of political public sentiment over time
+* **Support** intervention campaigns reinvigorating political engagement
+* **Protect** systems and citizens from political decay by keeping track of political sentiment over time
 * ...  
 <br/>
 
 ## Data
-The World Values Survey Data is a questionnaire that covers a wide range of topics.
-The data is free to use but is not distributable but can be retrieved via their site or use a custom set I've appended to the project.
-You can find the data and other related in-depth documentation here (Wave 7) here: https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp
-The 7th wave ran from 2017 to 2022, after which the results were consolidated in one comprehensive dataset.
-For this project, only a handful of variables have been retained (see retained_variables.md)
+The World Values Survey is a questionnaire that covers a wide range of topics.
+The data is free to use but not distributable. The pristine version of the data (Wave 7) and other related documentation can be found here: https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp. 
+Alternatively, a custom version of the data is available on this repository (custom_wvs7_data.parquet) that can be used in some parts of the analysis.
+
+The 7th wave ran from 2017 to 2022, after which the results were consolidated in one comprehensive dataset. For this project, only a handful of variables have been retained (see variables_defintion.md)
 <br/>
 
 ## How to
-The environment used for analysis is stored in **env.yml**. If you have anaconda installed run the file with the following cmd line: *conda env create -f “path_to_env.yml_file”* (win). This will create a custom conda environemnt with all the dependencies.
+The environment used for analysis is stored in **env.yml**. If you have anaconda installed run the following conda cmd (windows): *conda env create -f “path_to_env.yml_file”*. This will create a custom conda environemnt with all the dependencies.
 
 Replicate the analyses via **notebook.ipynb**.
 

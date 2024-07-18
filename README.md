@@ -1,15 +1,21 @@
-# Demographic and Socio-Economic Predictors of Political Engagement
+# Methodological and Demographic Predictors of Political Engagement
+<br/>
+
+# TLDR
+A XGBoost classifier predicting whether or not a person is politlcally engaged has been trained and deployed to AWS via Lambda. The model assess if a person would benefit from an intervention aiming to politically educate and re-engage people.
+
+To test it, download "test_aws_lambda.py" and run it (python and the "requests" package needed)
 <br/>
 
 ## Context 
 What aspects of a person's life influences their political engagement? 
 
-The **World Values Survey** (WVS) is an organization analyzing people's values on a global scale.
+The **World Values Survey** (WVS) is an organization iteratively analyzing people's values on a global scale.
 They have been running the experiment for more than 40 years. 
 Their questionnaire covers features such as personal values, wellbeing, political perceptions...
 
 This is the first part of 3 series project.
-In this section, we'll predict political engagement via high-level dimensions such as sex, education level...
+For this first project, we'll attempt to predict the political engagement levels of a person via surface dimensions like sex, education and profession.
 The second project will analyse political engagement by adding more complex variables (e.g., political perception).
 The final project will analyse the evolution of political engagement over the years. 
 <br/>
@@ -18,12 +24,11 @@ The final project will analyse the evolution of political engagement over the ye
 I believe it's useful to understand what makes a particular person "politically" engaged or not.
 Whether we are aware of, adhering or not to this idea, we are political creatures, living in a political world.
 Voting and asking for that succulent piece of bread at the table both rely on political undertones.
-Both of these actions involve the individual's relationship with their past and format their future.  
+We are simplifying here, but both of these actions involve the individual's relationship with their past and format their future.  
 
-The easy way out lies in political apathy. 
-If, for whatever reason, we relinquish our political momentum, we lose, among other valuable things, our voice to the table.
+Wouldn't political apathy result in the relinquishing of our political momentum, thus losing, among other valuable things, our voice to the table?
 
-Understanding political profiles would help us:
+Understanding political profiles is the first step in a comprehensive process that would help us to:
 * **Inform** about the consequences of political engagement 
 * **Prevent** political manipulation by identifying vulnerable populations 
 * **Support** intervention campaigns to revigorate political engagement
@@ -32,16 +37,26 @@ Understanding political profiles would help us:
 <br/>
 
 ## Data
-The data is free to use but is not distributable.
-You can find the data and related in-depth documentation here (Wave 7) here: https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp
+The World Values Survey Data is a questionnaire that covers a wide range of topics.
+The data is free to use but is not distributable but can be retrieved via their site or use a custom set I've appended to the project.
+You can find the data and other related in-depth documentation here (Wave 7) here: https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp
 The 7th wave ran from 2017 to 2022, after which the results were consolidated in one comprehensive dataset.
-
-For our current purpose, here are the column that we have retained for analysis:
-* 
+For this project, only a handful of variables have been retained (see retained_variables.md)
 <br/>
 
-## Methodology
-m
+## How to
+The environment used for analysis is stored in **env.yml**. If you have anaconda installed run the file with the following cmd line: *conda env create -f “path_to_env.yml_file”* (win). This will create a custom conda environemnt with all the dependencies.
+
+Replicate the analyses via **notebook.ipynb**.
+
+Skip the main analyses and run **train.ipynb** to train the model with the final version of the data (wrangled & imputed).
+
+Deploy the app to a local server by first saving the model in train.py with bentoml and running the following cmds (docker required):
+* **Build**: bentoml build
+* **Containerize**: bentoml containerize MODEL_NAME:TAG
+* **Serve**: docker run -it --rm -p 3000:3000 MODEL_NAME:TAG
+
+The model has been deployed on **AWS Lambda**. Try it out via **test_aws_lambda.py**.
 <br/>
 
 ## Shoutout 

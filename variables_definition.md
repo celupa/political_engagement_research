@@ -1,5 +1,8 @@
-# Original Variables
+# Original Variable Definition 
 * country
-*   test
+    * test 
 * sex
-*   1=
+    * 1=
+<br/>
+
+# Post-Wrangling Variable Definition 

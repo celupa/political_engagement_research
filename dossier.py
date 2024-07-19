@@ -7,6 +7,7 @@
 ### implement transform_array()
 ## replaces alternative responses with null (except -3)
 ## smoothe "not applicable" (-3 > -1)
+## birth_country to binary (1=native, 0=born in another country)
 ## rescale following vars to go from 1 to n:
 # education
 # profession
@@ -89,3 +90,4 @@ COLUMNS_TO_RETAIN = {# methodological variables
                      "Q220": "organized_political_events",
                      "Q221": "voted_locally",
                      "Q222": "voted_nationally"}
+

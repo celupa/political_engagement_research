@@ -8,6 +8,7 @@ api_url = "https://irc7lzpuuh.execute-api.eu-north-1.amazonaws.com/political_eng
 headers = {"Content-Type": "application/json"}
 
 # payloads
+# note: variable defintiions available in "misc/post_variable_definitions.json"
 # the profile below represents a politically disengaged, native zimbabwean man having completed the questionnaire
 # in a computer assisted setting (interviewer present) and who has been reported to be
 # interested in the exchange. His data indicates that he is single, young (gen y) 

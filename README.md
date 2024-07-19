@@ -9,7 +9,7 @@ Test the model by downloading and running **test_aws_lambda.py** (python and "re
 <br/>
 
 ## Context 
-The **World Values Survey** (WVS) is an organization that has been gathering socio-economic and psychological data across the world for over 40 years now.
+The **World Values Survey** (WVS) is an organization that has been gathering socio-economic and psychological data across the world for over 40 years.
 Their questionnaire covers features such as personal values, wellbeing, political perceptions and much more.
 
 This is the first part of 3-step project where we attempt to predict the political engagement level of a person via surface dimensions like sex, education and profession.

@@ -30,7 +30,6 @@ Understanding political profiles is the first step in a comprehensive process th
 * **Prevent** political manipulation by identifying vulnerable populations 
 * **Support** intervention campaigns reinvigorating political engagement
 * **Protect** systems and citizens from political decay by keeping track of political sentiment over time
-* ...  
 <br/>
 
 ## Data
@@ -38,7 +37,7 @@ The World Values Survey is a questionnaire that covers a wide range of topics.
 The data is free to use but not distributable. The pristine version of the data (Wave 7) and other related documentation can be found here: https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp. 
 Alternatively, a custom version of the data is available on this repository (custom_wvs7_data.parquet) that can be used in some parts of the analysis.
 
-The 7th wave ran from 2017 to 2022, after which the results were consolidated in one comprehensive dataset. For this project, only a handful of variables have been retained (see variables_defintion.md)
+The 7th wave ran from 2017 to 2022, after which the results were consolidated in one comprehensive dataset. For this project, only a handful of variables have been retained (dossier.py)
 <br/>
 
 ## How to

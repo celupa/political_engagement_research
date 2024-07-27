@@ -1,4 +1,5 @@
-FROM python:3.10-slim
+# for lambda deployment
+FROM public.ecr.aws/lambda/python:3.10
 
 COPY ["lambda/lambda_requirements.txt", \
       "misc/poleng_xgb.bin", \
@@ -6,3 +7,5 @@ COPY ["lambda/lambda_requirements.txt", \
       "./"]
 
 RUN pip install -r lambda_requirements.txt
+
+CMD [lambda_function.lambda_handler]

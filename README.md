@@ -47,12 +47,12 @@ Replicate the analyses via **notebook.ipynb**.
 
 Skip the main analyses and run **train.ipynb** to train the model with the final version of the data (wrangled & imputed).
 
-Deploy the app to a local server by first saving the model in train.py with bentoml and running the following cmds (docker required):
+Deploy the app to a local server by first saving the model in train.py with bentoml and running the following cmds (docker required, dev level folder):
 * **Build**: bentoml build
 * **Containerize**: bentoml containerize MODEL_NAME:TAG
 * **Serve**: docker run -it --rm -p 3000:3000 MODEL_NAME:TAG
 
-The model has been deployed on **AWS Lambda**. Try it out via **test_aws_lambda.py**.
+The model has been deployed on **AWS Lambda**. Try it out via **lambda/test_aws_lambda.py**.
 <br/>
 
 ## Shoutout 

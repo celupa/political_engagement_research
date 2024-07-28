@@ -35,7 +35,7 @@ Understanding political profiles is the first step in a comprehensive process th
 ## Data
 The World Values Survey is a questionnaire that covers a wide range of topics.
 The data is free to use but not distributable. The pristine version of the data (Wave 7) and other related documentation can be found here: https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp. 
-Alternatively, a custom version of the data is available on this repository (custom_wvs7_data.parquet) that can be used in some parts of the analysis. Additionally, variable definitions and other supporting documentation can be found in the **misc** folder.
+Alternatively, a custom version of the data is available on this repository (misc/custom_wvs7_data.parquet) that can be used in some parts of the analysis. Additionally, variable definitions and other supporting documentation can be found in the **misc** folder.
 
 The 7th wave ran from 2017 to 2022, after which the results were consolidated in one comprehensive dataset. For this project, only a handful of variables have been retained (see **assists/dossier.py**)
 <br/>

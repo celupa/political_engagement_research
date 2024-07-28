@@ -2,8 +2,8 @@
 <br/>
 
 ## TL;DR
-An XGBoost classifier predicting the political engagement of a person has been trained and deployed to AWS via Lambda. 
-The model assesses if a person would benefit from an intervention aiming at educating and re-engaging in political action.
+An XGBoost predictor of political engagement has been trained and deployed to AWS Lambda. 
+The classifier assesses whether a person would benefit from an intervention aiming to educate on political engagement and stimulate political involvement.
 
 Test the model by downloading and running **test_aws_lambda.py** (python and "requests" package needed).
 <br/>
@@ -20,10 +20,10 @@ The final project will inspect the evolution of political engagement over the ye
 ## Rationale
 Understanding the variables that make a person politically engaged is valuable for a society and its members.
 
-Whether we are aware of it or not, we are political creatures, living in a political world.
+Whether we are aware of it or not, we are political creatures living in a political world.
 By means of a simplified example, both voting and asking for a piece of bread at the table rely on political undertones. Both actions involve one's relationship with their past, their rapport to the current world and shape their future interactions.  
 
-Among other valuable things, political apathy may result in losing our voice to the table and the tools to direct our life to clearer shores.
+Among other valuable things, political apathy may result in losing the tools useful in nudging one's life in a more fulfilling direction (economic, social...).
 
 Understanding political profiles is the first step in a comprehensive process that would help us to:
 * **Inform** about the consequences of political apathy 
@@ -35,9 +35,9 @@ Understanding political profiles is the first step in a comprehensive process th
 ## Data
 The World Values Survey is a questionnaire that covers a wide range of topics.
 The data is free to use but not distributable. The pristine version of the data (Wave 7) and other related documentation can be found here: https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp. 
-Alternatively, a custom version of the data is available on this repository (custom_wvs7_data.parquet) that can be used in some parts of the analysis.
+Alternatively, a custom version of the data is available on this repository (custom_wvs7_data.parquet) that can be used in some parts of the analysis. Additionally, variable definitions and other supporting documentation can be found in the **misc** folder.
 
-The 7th wave ran from 2017 to 2022, after which the results were consolidated in one comprehensive dataset. For this project, only a handful of variables have been retained (dossier.py)
+The 7th wave ran from 2017 to 2022, after which the results were consolidated in one comprehensive dataset. For this project, only a handful of variables have been retained (see **assists/dossier.py**)
 <br/>
 
 ## How to
@@ -45,9 +45,9 @@ The environment used for analysis is stored in **env.yml**. If you have anaconda
 
 Replicate the analyses via **notebook.ipynb**.
 
-Skip the main analyses and run **train.ipynb** to train the model with the final version of the data (wrangled & imputed).
+Skip the main analyses and run **train.ipynb** to train the model with the final version of the data (wrangled & imputed) and optimized parameters.
 
-Deploy the app to a local server by first saving the model in train.py with bentoml and running the following cmds (docker required, dev level folder):
+Deploy the app to a local server by first saving the model in train.py with bentoml and running the following cmds at the dev level (docker required):
 * **Build**: bentoml build
 * **Containerize**: bentoml containerize MODEL_NAME:TAG
 * **Serve**: docker run -it --rm -p 3000:3000 MODEL_NAME:TAG

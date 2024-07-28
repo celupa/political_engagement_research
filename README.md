@@ -5,7 +5,7 @@
 An XGBoost predictor of political engagement has been trained and deployed to AWS Lambda. 
 The classifier assesses whether a person would benefit from an intervention aiming to educate on political engagement and stimulate political involvement.
 
-Test the model by downloading and running **test_aws_lambda.py** (python and "requests" package needed).
+Test the model by downloading and running **lambda/test_aws_lambda.py** (python and "requests" package needed).
 <br/>
 
 ## Context 

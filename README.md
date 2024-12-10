@@ -8,6 +8,8 @@ The classifier assesses whether a person would benefit from an intervention aimi
 This project mainly **focuses on model training & deployment**.
 
 Test the model by downloading and running **lambda/test_aws_lambda.py** (python and "requests" package needed).
+
+If you get Status Code: 500, it's a **cold start error**. Give a few minutes to the server to boot.
 <br/>
 
 ## Context 
@@ -55,6 +57,8 @@ Deploy the app to a local server by first saving the model in train.py with bent
 * **Serve**: docker run -it --rm -p 3000:3000 MODEL_NAME:TAG
 
 The model has been deployed on **AWS Lambda**. Try it out via **lambda/test_aws_lambda.py**.
+
+If this doesn't work, give a few minutes to the server to restart.
 <br/>
 
 ## Shoutout 

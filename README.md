@@ -10,7 +10,7 @@ This project mainly **focuses on model training & deployment**.
 Test the model by downloading and running **lambda/test_aws_lambda.py** (python and "requests" package needed).
 If you get Status Code: 500, it's a **cold start error**. Give a few minutes to the server to boot.
 
-Walkthroughs and result interpretations can be found train.ipynb.
+Walkthroughs and result interpretations can be found notebook.ipynb.
 <br/>
 
 ## Context 

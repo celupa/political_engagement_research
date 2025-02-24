@@ -8,8 +8,9 @@ The classifier assesses whether a person would benefit from an intervention aimi
 This project mainly **focuses on model training & deployment**.
 
 Test the model by downloading and running **lambda/test_aws_lambda.py** (python and "requests" package needed).
-
 If you get Status Code: 500, it's a **cold start error**. Give a few minutes to the server to boot.
+
+Walkthroughs and result interpretations can be found train.ipynb.
 <br/>
 
 ## Context 

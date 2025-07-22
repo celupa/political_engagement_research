@@ -1,6 +1,8 @@
 # Methodological and Demographic Predictors of Political Engagement
 <br/>
 
+## UPDATE220725: APP has been taken offline.
+
 ## TL;DR
 An XGBoost predictor of political engagement has been trained and deployed to AWS Lambda. 
 The classifier assesses whether a person would benefit from an intervention aiming to educate on political engagement and stimulate political involvement.
